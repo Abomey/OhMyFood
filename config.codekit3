@@ -9,11 +9,11 @@
   ],
   "creatorBuild" : "34564",
   "files" : {
-    "\/assets\/images\/logo\/ohmyfood.png" : {
+    "\/assets\/logo\/ohmyfood.png" : {
       "ft" : 32768,
       "iS" : 5531,
       "oA" : 0,
-      "oAP" : "\/assets\/images\/logo\/ohmyfood.png",
+      "oAP" : "\/assets\/logo\/ohmyfood.png",
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 0,
@@ -22,22 +22,22 @@
       "q" : 90,
       "rq" : 75
     },
-    "\/assets\/images\/logo\/ohmyfood@2x.svg" : {
+    "\/assets\/logo\/ohmyfood@2x.svg" : {
       "ft" : 2097152,
       "miP" : 0,
       "oA" : 2,
-      "oAP" : "\/assets\/images\/logo\/ohmyfood@2x.svg",
+      "oAP" : "\/assets\/logo\/ohmyfood@2x.svg",
       "oF" : 0,
       "opt" : 0,
       "plM" : 52780316221407,
       "prP" : 0
     },
-    "\/assets\/images\/restaurants\/jay-wennington-N_Y88TWmGwA-unsplash.jpg" : {
+    "\/assets\/restaurants\/jay-wennington-N_Y88TWmGwA-unsplash.jpg" : {
       "ft" : 16384,
       "iS" : 1996484,
       "jF" : 0,
       "oA" : 0,
-      "oAP" : "\/assets\/images\/restaurants\/jay-wennington-N_Y88TWmGwA-unsplash.jpg",
+      "oAP" : "\/assets\/restaurants\/jay-wennington-N_Y88TWmGwA-unsplash.jpg",
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 0,
@@ -45,12 +45,12 @@
       "q" : 100,
       "rq" : 75
     },
-    "\/assets\/images\/restaurants\/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" : {
+    "\/assets\/restaurants\/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" : {
       "ft" : 16384,
       "iS" : 3641797,
       "jF" : 0,
       "oA" : 0,
-      "oAP" : "\/assets\/images\/restaurants\/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg",
+      "oAP" : "\/assets\/restaurants\/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg",
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 0,
@@ -58,12 +58,12 @@
       "q" : 100,
       "rq" : 75
     },
-    "\/assets\/images\/restaurants\/stil-u2Lp8tXIcjw-unsplash.jpg" : {
+    "\/assets\/restaurants\/stil-u2Lp8tXIcjw-unsplash.jpg" : {
       "ft" : 16384,
       "iS" : 1817855,
       "jF" : 0,
       "oA" : 0,
-      "oAP" : "\/assets\/images\/restaurants\/stil-u2Lp8tXIcjw-unsplash.jpg",
+      "oAP" : "\/assets\/restaurants\/stil-u2Lp8tXIcjw-unsplash.jpg",
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 0,
@@ -71,18 +71,38 @@
       "q" : 100,
       "rq" : 75
     },
-    "\/assets\/images\/restaurants\/toa-heftiba-DQKerTsQwi0-unsplash.jpg" : {
+    "\/assets\/restaurants\/toa-heftiba-DQKerTsQwi0-unsplash.jpg" : {
       "ft" : 16384,
       "iS" : 1205365,
       "jF" : 0,
       "oA" : 0,
-      "oAP" : "\/assets\/images\/restaurants\/toa-heftiba-DQKerTsQwi0-unsplash.jpg",
+      "oAP" : "\/assets\/restaurants\/toa-heftiba-DQKerTsQwi0-unsplash.jpg",
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 0,
       "ou" : "lpckwebp-none",
       "q" : 100,
       "rq" : 75
+    },
+    "\/css\/style.css" : {
+      "aP" : 1,
+      "bl" : 0,
+      "ci" : 0,
+      "co" : 0,
+      "ft" : 16,
+      "ma" : 0,
+      "oA" : 0,
+      "oAP" : "\/css\/style-min.css",
+      "oF" : 0,
+      "pg" : 0
+    },
+    "\/css\/style.css.map" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/css\/style.css.map",
+      "oF" : 0
     },
     "\/index.html" : {
       "cB" : 0,
@@ -118,6 +138,75 @@
       "pME" : 1,
       "rFN" : 0,
       "uCM" : 0
+    },
+    "\/SASS\/base.css" : {
+      "aP" : 1,
+      "bl" : 0,
+      "ci" : 0,
+      "co" : 0,
+      "ft" : 16,
+      "ma" : 0,
+      "oA" : 0,
+      "oAP" : "\/SASS\/base-min.css",
+      "oF" : 0,
+      "pg" : 0
+    },
+    "\/SASS\/base.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/SASS\/base.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0,
+      "sct" : 0
+    },
+    "\/SASS\/mixins.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/SASS\/mixins.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0,
+      "sct" : 0
+    },
+    "\/SASS\/style.css" : {
+      "aP" : 1,
+      "bl" : 0,
+      "ci" : 0,
+      "co" : 0,
+      "ft" : 16,
+      "ma" : 0,
+      "oA" : 0,
+      "oAP" : "\/SASS\/style-min.css",
+      "oF" : 0,
+      "pg" : 0
+    },
+    "\/SASS\/style.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 0,
+      "oAP" : "\/SASS\/style.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0,
+      "sct" : 0
     }
   },
   "hooks" : [
