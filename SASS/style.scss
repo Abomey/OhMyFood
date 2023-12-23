@@ -3,30 +3,105 @@
 
 body {
     box-sizing: border-box;
-    font-family: ;
+    font-family: 'roboto',sans-serif;
 }
 
-header {
-    @include my-loader;
-    box-shadow: 0 5px 10px lightgrey;
+// header
 
-    h1 {
-        font-familly: ;
-        margin: 0;
-        padding: 1rem 0;
-        text-align: center;
+header {
+    @include flex-center();
+    width: 375px;
+    height: 63px;
+    align-items: center;
+
+
+    img {
+        width: 197px;
+        height: 36px;
     }
 }
 
 
+// nav bar
+
+.nav-bar {
+    text-align: center;
+    
+    
+    .search-bar {
+
+        align-items: center;
+        input {
+            border: none;
+           
+    
+        }
+        .btn-gradient {
+            margin-bottom: 3rem;
+        }
+        
+        @include btn-gradient-style (); // Mixin du bouton
+    }
+    
+
+}
+
+// fonctionnement
+
+main {
+
+    .menu {
+        h2 {
+
+        }
+        ol {
+
+        }
+
+    }
+
+    .restaurants {
+
+        .card {
+            img{
+                height: 270px;
+            }
+            
+
+        }
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// restaurant
+.restaurant {
+    img {
+        width: 250px;
+    }
+}
 
 
 // footer
 
 footer {
-    background-color:$-- grayblack;
     color:white;
-    padding:;
     h1 {
         display: flex;
         justify-content: center;

@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400&family=Shrikhand&display=swap");
+body {
+  box-sizing: border-box;
+  font-family: "roboto", sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  width: 375px;
+  height: 63px;
+  align-items: center;
+}
+header img {
+  width: 197px;
+  height: 36px;
+}
+
+.nav-bar {
+  text-align: center;
+}
+.nav-bar .search-bar {
+  align-items: center;
+}
+.nav-bar .search-bar input {
+  border: none;
+}
+.nav-bar .search-bar .btn-gradient {
+  margin-bottom: 3rem;
+}
+.nav-bar .search-bar .btn-gradient {
+  flex-wrap: wrap;
+  width: 100%;
+  border-radius: 25px;
+  font-size: 15px;
+}
+.nav-bar .search-bar .btn-gradient label {
+  color: white;
+  background: linear-gradient(#9356dc, #ff79da);
+}
+.nav-bar .search-bar .btn-gradient label:hover {
+  cursor: pointer;
+}
+.nav-bar .search-bar .btn-gradient p {
+  font-size: 30px;
+}
+
+main .restaurants .card img {
+  height: 270px;
+}
+
+.restaurant img {
+  width: 250px;
+}
+
+footer {
+  color: white;
+}
+footer h1 {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+footer a {
+  text-decoration: none;
+  color: white;
+  align-items: center;
+}
+
+/*# sourceMappingURL=style.css.map */
