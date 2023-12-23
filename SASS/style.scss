@@ -1,2 +1,43 @@
 @import "base";
 @import "mixins";
+
+body {
+    box-sizing: border-box;
+    font-family: ;
+}
+
+header {
+    @include my-loader;
+    box-shadow: 0 5px 10px lightgrey;
+
+    h1 {
+        font-familly: ;
+        margin: 0;
+        padding: 1rem 0;
+        text-align: center;
+    }
+}
+
+
+
+
+// footer
+
+footer {
+    background-color:$-- grayblack;
+    color:white;
+    padding:;
+    h1 {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+
+    }
+    a { 
+        text-decoration: none;
+        color: white;
+        align-items: center;
+
+
+    }
+}
