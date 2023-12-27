@@ -1,10 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&family=Shrikhand&display=swap');
 
 
-
-
-
-//       Variables Colors
 $primary: #9356dc;
 $secondary: #ff79da;
 $blue2: #003A68;
@@ -12,10 +8,24 @@ $blue: #89C8FA;
 $greenfont: #008766;
 $green: #99E2D0;
 $grayblack: #353535;
+$graylight:#F6F6F6;
+
 
 
 //       Variables média queries
 
+$smartphone: 667px;
+$tablette: 768px;
+$desktop: 1200px;
 
 
+.bold {
+    font-weight: bold;
+}
+
+.titlegray {
+
+    color: $grayblack
+    
+}
 

@@ -2,117 +2,170 @@
 @import "mixins";
 
 body {
+
     box-sizing: border-box;
-    font-family: 'roboto',sans-serif;
-}
-
-// header
-
-header {
-    @include flex-center();
-    width: 375px;
-    height: 63px;
-    align-items: center;
+    font-family: 'roboto', sans-serif;
 
 
-    img {
-        width: 197px;
-        height: 36px;
-    }
-}
+    header {
+        @include header-styling ();
+        text-align: center;
 
 
-// nav bar
-
-.nav-bar {
-    text-align: center;
-    
-    
-    .search-bar {
-
-        align-items: center;
-        input {
-            border: none;
-           
-    
-        }
-        .btn-gradient {
-            margin-bottom: 3rem;
-        }
-        
-        @include btn-gradient-style (); // Mixin du bouton
-    }
-    
-
-}
-
-// fonctionnement
-
-main {
-
-    .menu {
-        h2 {
+        h1 {
+            font-family: 'Shrikhand', cursive;
+            font-size: 3rem;
+            margin: 0;
+            padding: 1rem 0;
+            text-align: center;
 
         }
-        ol {
-
-        }
-
     }
 
-    .restaurants {
 
-        .card {
-            img{
-                height: 270px;
+    .nav-bar {
+        text-align: center;
+        background-color: $graylight;
+
+
+        .search-bar {
+
+            margin-top: 5px;
+            align-items: center;
+            font-size: 2rem;
+            padding-top: 1rem;
+            background-color: $graylight;
+
+            input {
+
+                border: none;
+                font-size: 1rem;
+                width: 300px;
+                background-color: $graylight;
+
             }
-            
+
+            .btn-gradient {
+                margin-bottom: 3rem;
+
+            }
 
         }
-    }
 
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// restaurant
-.restaurant {
-    img {
-        width: 250px;
-    }
-}
-
-
-// footer
-
-footer {
-    color:white;
-    h1 {
-        display: flex;
-        justify-content: center;
-        width: 100%;
+        @include btn-gradient-style ();
 
     }
-    a { 
-        text-decoration: none;
+
+    main {
+
+        .menu {
+
+            h2 {}
+
+            ol {
+                list-style: none;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 3rem;
+                justify-content: center;
+
+                li {
+                    width: 280px;
+                    background-color: $graylight;
+                    border-radius: 1rem;
+                    padding: 1.5rem 0;
+                    box-shadow: 0 3px 5px black;
+                    transition: transform 1s;
+                    font-size: 1.1rem;
+
+
+
+                }
+
+                span {
+                    position: relative;
+                    left: -1rem;
+                    border: 1px solid $primary;
+                    padding: 0.4rem 0.8rem;
+                    border-radius: 50%;
+                    background-color: $primary;
+                    color: white;
+                }
+
+
+
+
+
+
+
+            }
+        }
+
+        .restaurants {
+
+            .card {
+
+                img {
+                    width: 100%;
+                    object-fit: cover;
+                    min-height: 200px;
+                    max-height: 200px;
+                    border-radius: 1rem 1rem 0 0;
+
+                }
+            }
+
+
+        }
+
+
+
+
+
+    }
+
+
+    .footer {
+        background-color: #353535;
+
         color: white;
-        align-items: center;
+        padding: 1rem 0 1rem 1.5rem;
 
+        h1 {
+            display: flex;
+            font-family: 'Shrikhand', cursive;
+        }
+
+        a {
+            text-decoration: none;
+            color: white
+        }
 
     }
+
+
+
+    // * media 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

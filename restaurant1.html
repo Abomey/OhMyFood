@@ -6,21 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/80102aa753.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/assets/css/restaurant.css">
-    <title>A la francaise</title>
+    <title>A la française</title>
 </head>
 
 
 <body>
+
     <header>
-        <div>
-            <div class="logo">
-                <a href="index.html"><i class="da-solid fa-arrow-left"></i></a>
-            </div>
-            <div class="titre">
-                <h1>ohmyfood</h1>
-            </div>
-        </div>
+
+        <div class="logo"><a href="index.html"><i class="da-solid fa-arrow-left"></i></a></div>
+        <h1>ohmyfood</h1>
     </header>
+
+    <nav class="nav-bar">
+        <form class="search-bar">
+            <i class="fa-solid fa-location-dot"></i>
+            <label for="search" class="accessibility-label"></label>
+            <input class="bold" placeholder="Paris,belleville">
+            <div class="btn-gradient">
+                <p class="bold">Réservez le menu qui vous convient</p>
+                <p class="titlegray">Découvrez des restaurants d'exception, séléctionés par nos soins.</p>
+                <label>Explorer nos restaurants </label>
+            </div>
+        </form>
+
+    </nav>
     <main>
         <img src="assets/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg">
         <div>
@@ -160,8 +170,9 @@
 
 
         <footer>
-            <h1><a href="#">ohmyfood</a></h1>
+
             <div class="footer">
+                <h1><a href="#">ohmyfood</a></h1>
                 <p>
                     <i class="fa-solid fa-utensils"></i>
                     Proposer un restaurant
