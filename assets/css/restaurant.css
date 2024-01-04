@@ -1,5 +1,69 @@
-main .logo {
-  @in;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400&family=Shrikhand&display=swap");
+.bold {
+  font-weight: bold;
+}
+
+.titlegray {
+  color: gray;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+body header {
+  box-shadow: 0 5px 10px lightgrey;
+}
+body header h1 {
+  font-family: "Shrikhand", cursive;
+  font-size: 2.3rem;
+  margin: 0;
+  padding: 1rem 0;
+  text-align: center;
+}
+body main img {
+  height: 300px;
+  object-fit: cover;
+  width: 100%;
+}
+body main .titre-menu {
+  position: relative;
+  border-radius: rem 1rem 0 0;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 1.5rem;
+  background-color: #F6F6F6;
+}
+body main h1 {
+  font-family: "Shrikhand", cursive;
+  font-size: 28px;
+}
+body main i {
+  display: flex;
+  font-size: 1.5rem;
+}
+body footer {
+  background-color: #353535;
+  color: white;
+  padding-top: 5px;
+}
+body footer h1 {
+  margin-left: 20px;
+  display: flex;
+  font-family: "Shrikhand", cursive;
+  font-weight: normal;
+}
+body footer a {
+  text-decoration: none;
+  color: white;
+}
+body footer i {
+  padding-right: 10px;
+}
+body footer .footer {
+  padding: 0rem 0 1rem 1rem;
 }
 
 /*# sourceMappingURL=restaurant.css.map */
