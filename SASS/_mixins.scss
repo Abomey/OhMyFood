@@ -1,50 +1,21 @@
-@mixin my-custom-loader {
-    .loader {
-      @include flex-center;
-      opacity: 0.9;
-      position: fixed;
-      inset: 0;
-      height: 100vh;
-      z-index: 1;
-      background: linear-gradient(45deg, #ff69b4, #ff6347, #87cefa, #98fb98);
-      background-size: 400% 400%;
-      animation: color-shift 4s infinite, fade-out 1s 3s forwards; /* Ajout d'une animation de fade-out */
-      font: 5vw/100vh "Shrikhand";
-      font-size: 4rem;
-      text-align: center;
-      color: transparent;
-      -webkit-background-clip: text; /* Permet de remplir le texte avec le dégradé */
-      backface-visibility: hidden;
-      pointer-events: none; /* Désactive les interactions avec le loader */
-    }
-  
-    body.loader-active {
-      overflow: hidden; /* Empêche le défilement de la page lorsque le loader est actif */
-    }
-  }
-  
-  /* Animation pour changer la couleur de fond */
-  @keyframes color-shift {
-    0% {
-      background-position: 0% 50%;
-    }
-    100% {
-      background-position: 100% 50%;
-    }
-  }
-  
-  /* Animation pour le fade-out */
-  @keyframes fade-out {
-    0% {
-      opacity: 0.9;
-    }
-    100% {
-      opacity: 0;
-      display: none; /* Cacher complètement le loader à la fin de l'animation */
-    }
+@mixin hidden {
+    visibility: hidden;
+    opacity: 0;
 }
 
+@mixin visible {
+    visibility: visible;
+    opacity: 1;
+}
 
+@mixin flex-column-row-desktop {
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (min-width: 768px) {
+        flex-direction: row;
+    }
+}
 
 @mixin article-menu {
     .article-menu {
@@ -106,29 +77,6 @@
     }
 }
 
-
-@mixin btn-gradient-style {
-    .btn-gradient { 
-        flex-wrap: wrap;
-        background-color:$graylight;
-        color:white;
-        border-radius: 2rem;
-        border:none;
-        font-size: 1rem;
-        background: linear-gradient($secondary,$primary,);
-        padding: 1rem 1rem 0.8rem 1.5rem;
-        margin-bottom: 3rem;
-        box-shadow: 0 3px 10px $grayblack;
-    
-        
-        &:hover {
-            cursor:pointer;
-            
-        }
-
-    } 
-
-}
 
 @mixin flex-center {
     display: flex;

@@ -1,95 +1,62 @@
-@import "base";
-@import "mixins";
+@import "base"; // Style de base commun à toutes les pages, incluant les variables.
+@import "mixins"; // Style réutilisable.
+@import "keyframes"; // Animations (pouvant utiliser les variables et les mixins)
 
-body {
-    box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
-    margin: 0 auto;
-    
-    header {
+@import "header"; // Style de base du header.
 
-        h1 {
-            font-family : 'Shrikhand', cursive;
-            font-size: 2.3rem;
-            margin: 0;
-            padding: 1rem 0;
-            text-align: center;
-            
+// Ajout de style spécifique pour le header (pour la page dédiée aux restaurants)
+header {
+    .logo {
+        display: flex;
+        align-items: center;
+        margin-left: 30px;
+        flex-basis: 50px;
+
+        i {
+            font-size: 20px;
+            color: black;
+            cursor: pointer;
         }
-        
-       
-
-        .toto {
-            display: flex; 
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            margin-left: 30px;
-            flex-basis: 50px;
-
-            i {
-                font-size: 20px;
-                color: black;
-                cursor: pointer;
-            }
-        }
-    
     }
-
-    main {
-
-        background-color: $graylight;
-    
-        img {
-            height: 300px;
-            object-fit: cover;
-            width: 100%;
-        }
-
-        .titre-menu {
-            position: relative;
-            top: -4rem;
-            border-radius: 3rem 3rem 0 0;
-            background-color: white;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-basis: 95%;
-            padding-left: 1.5rem;
-            background-color: $graylight;
-
-            h1 {
-                font-family: 'Shrikhand', cursive;
-                font-size: 28px;
-                font-weight: 400;
-            }
-    
-            i {
-                display: flex;
-                font-size: 2rem;
-                
-            }
-            
-            @include color-heart;
-        }
-
-        
-
-
-        
-        
-        
-    }
-
-    
-
-   
 }
 
 
+main {
 
+    background-color: $graylight;
 
+    img {
+        height: 300px;
+        object-fit: cover;
+        width: 100%;
+    }
 
+    .titre-menu {
+        position: relative;
+        top: -4rem;
+        border-radius: 3rem 3rem 0 0;
+        background-color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-basis: 95%;
+        padding-left: 1.5rem;
+        background-color: $graylight;
 
+        h1 {
+            font-family: 'Shrikhand', cursive;
+            font-size: 28px;
+            font-weight: 400;
+        }
+
+        i {
+            display: flex;
+            font-size: 2rem;
+            
+        }
+        
+        @include color-heart;
+    }
+}
+
+@import "footer";

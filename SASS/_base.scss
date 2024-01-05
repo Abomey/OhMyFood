@@ -21,7 +21,14 @@ $desktop: 1200px;
 
 $max-width: 1500px;
 
-
+body {
+    box-sizing: border-box;
+    font-family: 'roboto', sans-serif;
+    width: 100%;
+    overflow-x: hidden;
+    max-width: $max-width;
+    margin: 0 auto;
+}
 
 .titlegray {
 
@@ -38,4 +45,37 @@ $max-width: 1500px;
     font-weight: 700;
     line-height: 28px;
   
+}
+
+.heart {
+    i {
+        font-size: 1.3rem;
+        position: absolute;
+        top: 20px;
+        right: 25px;
+    }
+
+    .fa-sharp::before {
+        transition: all 1s ease-in-out;
+    }
+
+    .fa-solid::before {
+        opacity: 0;
+        background: -webkit-linear-gradient(#9356DC, #FF79DA);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        transition: all 1s ease-in-out;
+    }
+
+    &:hover {
+        .fa-sharp::before {
+            opacity: 0;
+        }
+
+        .fa-solid:before {
+            opacity: 1;
+        }
+    }
+
 }

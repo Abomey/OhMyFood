@@ -1,0 +1,29 @@
+@keyframes display-in-out {
+    0% {
+        @include visible;
+    }
+    100% {
+    @include hidden;
+      display: none;
+    }
+}
+
+@keyframes display-out-in {
+    0% {
+        @include hidden;
+        max-height: 0;
+    }
+    100% {
+        max-height: fit-content;
+        @include visible;
+    }
+}
+
+@keyframes color-shift {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
+  }

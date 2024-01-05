@@ -1,5 +1,13 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400&family=Shrikhand&display=swap");
+body {
+  box-sizing: border-box;
+  font-family: "roboto", sans-serif;
+  width: 100%;
+  overflow-x: hidden;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
 .titlegray {
   color: #353535;
   font-weight: 300;
@@ -13,7 +21,53 @@
   line-height: 28px;
 }
 
-/* Animation pour changer la couleur de fond */
+.heart i {
+  font-size: 1.3rem;
+  position: absolute;
+  top: 20px;
+  right: 25px;
+}
+.heart .fa-sharp::before {
+  transition: all 1s ease-in-out;
+}
+.heart .fa-solid::before {
+  opacity: 0;
+  background: -webkit-linear-gradient(#9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 1s ease-in-out;
+}
+.heart:hover .fa-sharp::before {
+  opacity: 0;
+}
+.heart:hover .fa-solid:before {
+  opacity: 1;
+}
+
+@keyframes display-in-out {
+  0% {
+    visibility: visible;
+    opacity: 1;
+  }
+  100% {
+    visibility: hidden;
+    opacity: 0;
+    display: none;
+  }
+}
+@keyframes display-out-in {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+    max-height: 0;
+  }
+  100% {
+    max-height: fit-content;
+    visibility: visible;
+    opacity: 1;
+  }
+}
 @keyframes color-shift {
   0% {
     background-position: 0% 50%;
@@ -22,51 +76,42 @@
     background-position: 100% 50%;
   }
 }
-/* Animation pour le fade-out */
-@keyframes fade-out {
-  0% {
-    opacity: 0.9;
-  }
-  100% {
-    opacity: 0;
-    display: none; /* Cacher complètement le loader à la fin de l'animation */
-  }
+header {
+  text-align: center;
+  z-index: 1;
+  overflow: hidden;
+  width: 375px;
+  height: 63px;
 }
-body {
-  box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
-  margin: 0 auto;
-}
-body header h1 {
+header h1 {
   font-family: "Shrikhand", cursive;
-  font-size: 2.3rem;
+  font-size: 1.875rem;
   margin: 0;
   padding: 1rem 0;
   text-align: center;
 }
-body header .toto {
-  display: flex;
-}
-body header .logo {
+
+header .logo {
   display: flex;
   align-items: center;
   margin-left: 30px;
   flex-basis: 50px;
 }
-body header .logo i {
+header .logo i {
   font-size: 20px;
   color: black;
   cursor: pointer;
 }
-body main {
+
+main {
   background-color: #F6F6F6;
 }
-body main img {
+main img {
   height: 300px;
   object-fit: cover;
   width: 100%;
 }
-body main .titre-menu {
+main .titre-menu {
   position: relative;
   top: -4rem;
   border-radius: 3rem 3rem 0 0;
@@ -78,35 +123,86 @@ body main .titre-menu {
   padding-left: 1.5rem;
   background-color: #F6F6F6;
 }
-body main .titre-menu h1 {
+main .titre-menu h1 {
   font-family: "Shrikhand", cursive;
   font-size: 28px;
   font-weight: 400;
 }
-body main .titre-menu i {
+main .titre-menu i {
   display: flex;
   font-size: 2rem;
 }
-body main .titre-menu .layout-star {
+main .titre-menu .layout-star {
   display: flex;
   height: 50px;
   align-items: center;
   justify-content: center;
   font-size: 1.5rem;
 }
-body main .titre-menu .layout-star .fa-solid.fa-heart {
+main .titre-menu .layout-star .fa-solid.fa-heart {
   display: none;
 }
-body main .titre-menu .layout-star:hover {
+main .titre-menu .layout-star:hover {
   cursor: pointer;
   opacity: 0;
   background-clip: border-box;
 }
-body main .titre-menu .layout-star:hover .fa-regular.fa-heart {
+main .titre-menu .layout-star:hover .fa-regular.fa-heart {
   display: none;
 }
-body main .titre-menu .layout-star:hover .fa-solid.fa-heart {
+main .titre-menu .layout-star:hover .fa-solid.fa-heart {
   display: inline;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  background-color: #353535;
+  color: white;
+}
+footer a {
+  font-family: "Shrikhand", cursive;
+  text-decoration: 0;
+  color: white;
+}
+@media screen and (min-width: 768px) {
+  footer {
+    flex-direction: row-reverse;
+  }
+}
+footer .footer-links {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  footer .footer-links {
+    flex-direction: row;
+  }
+}
+@media screen and (min-width: 768px) {
+  footer .footer-links {
+    gap: 14px;
+  }
+}
+footer .footer-links .footer-interactions {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+@media screen and (min-width: 768px) {
+  footer .footer-links .footer-interactions {
+    flex-direction: row;
+  }
+}
+footer .footer-links .footer-information {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+@media screen and (min-width: 768px) {
+  footer .footer-links .footer-information {
+    flex-direction: row;
+  }
 }
 
 /*# sourceMappingURL=restaurant.css.map */
