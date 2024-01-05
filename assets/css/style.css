@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400&family=Shrikhand&display=swap");
 .titlegray {
   color: #353535;
@@ -12,6 +13,25 @@
   line-height: 28px;
 }
 
+/* Animation pour changer la couleur de fond */
+@keyframes color-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+/* Animation pour le fade-out */
+@keyframes fade-out {
+  0% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0;
+    display: none; /* Cacher complètement le loader à la fin de l'animation */
+  }
+}
 body {
   box-sizing: border-box;
   font-family: "roboto", sans-serif;
@@ -25,6 +45,28 @@ body header {
   overflow: hidden;
   width: 375px;
   height: 63px;
+}
+body header .loader {
+  display: flex;
+  justify-content: center;
+  opacity: 0.9;
+  position: fixed;
+  inset: 0;
+  height: 100vh;
+  z-index: 1;
+  background: linear-gradient(45deg, #ff69b4, #ff6347, #87cefa, #98fb98);
+  background-size: 400% 400%;
+  animation: color-shift 4s infinite, fade-out 1s 3s forwards; /* Ajout d'une animation de fade-out */
+  font: 5vw/100vh "Shrikhand";
+  font-size: 4rem;
+  text-align: center;
+  color: transparent;
+  -webkit-background-clip: text; /* Permet de remplir le texte avec le dégradé */
+  backface-visibility: hidden;
+  pointer-events: none; /* Désactive les interactions avec le loader */
+}
+body header body.loader-active {
+  overflow: hidden; /* Empêche le défilement de la page lorsque le loader est actif */
 }
 body header h1 {
   font-family: "Shrikhand", cursive;

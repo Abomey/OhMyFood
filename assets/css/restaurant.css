@@ -1,18 +1,41 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400&family=Shrikhand&display=swap");
-.bold {
-  font-weight: bold;
-}
-
 .titlegray {
-  color: gray;
+  color: #353535;
+  font-weight: 300;
+  font-size: 18px;
 }
 
+.bold {
+  font-size: 24px;
+  font-weight: bold;
+  font-weight: 700;
+  line-height: 28px;
+}
+
+/* Animation pour changer la couleur de fond */
+@keyframes color-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+/* Animation pour le fade-out */
+@keyframes fade-out {
+  0% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0;
+    display: none; /* Cacher complètement le loader à la fin de l'animation */
+  }
+}
 body {
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
-}
-body header {
-  box-shadow: 0 5px 10px lightgrey;
+  margin: 0 auto;
 }
 body header h1 {
   font-family: "Shrikhand", cursive;
@@ -21,6 +44,23 @@ body header h1 {
   padding: 1rem 0;
   text-align: center;
 }
+body header .toto {
+  display: flex;
+}
+body header .logo {
+  display: flex;
+  align-items: center;
+  margin-left: 30px;
+  flex-basis: 50px;
+}
+body header .logo i {
+  font-size: 20px;
+  color: black;
+  cursor: pointer;
+}
+body main {
+  background-color: #F6F6F6;
+}
 body main img {
   height: 300px;
   object-fit: cover;
@@ -28,42 +68,45 @@ body main img {
 }
 body main .titre-menu {
   position: relative;
-  border-radius: rem 1rem 0 0;
+  top: -4rem;
+  border-radius: 3rem 3rem 0 0;
   background-color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-basis: 95%;
   padding-left: 1.5rem;
   background-color: #F6F6F6;
 }
-body main h1 {
+body main .titre-menu h1 {
   font-family: "Shrikhand", cursive;
   font-size: 28px;
+  font-weight: 400;
 }
-body main i {
+body main .titre-menu i {
   display: flex;
+  font-size: 2rem;
+}
+body main .titre-menu .layout-star {
+  display: flex;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
   font-size: 1.5rem;
 }
-body footer {
-  background-color: #353535;
-  color: white;
-  padding-top: 5px;
+body main .titre-menu .layout-star .fa-solid.fa-heart {
+  display: none;
 }
-body footer h1 {
-  margin-left: 20px;
-  display: flex;
-  font-family: "Shrikhand", cursive;
-  font-weight: normal;
+body main .titre-menu .layout-star:hover {
+  cursor: pointer;
+  opacity: 0;
+  background-clip: border-box;
 }
-body footer a {
-  text-decoration: none;
-  color: white;
+body main .titre-menu .layout-star:hover .fa-regular.fa-heart {
+  display: none;
 }
-body footer i {
-  padding-right: 10px;
-}
-body footer .footer {
-  padding: 0rem 0 1rem 1rem;
+body main .titre-menu .layout-star:hover .fa-solid.fa-heart {
+  display: inline;
 }
 
 /*# sourceMappingURL=restaurant.css.map */

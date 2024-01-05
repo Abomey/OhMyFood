@@ -4,9 +4,9 @@
 body {
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
-
+    margin: 0 auto;
+    
     header {
-        box-shadow: 0 5px 10px lightgrey;
 
         h1 {
             font-family : 'Shrikhand', cursive;
@@ -14,13 +14,35 @@ body {
             margin: 0;
             padding: 1rem 0;
             text-align: center;
+            
+        }
+        
+       
+
+        .toto {
+            display: flex; 
         }
 
+        .logo {
+            display: flex;
+            align-items: center;
+            margin-left: 30px;
+            flex-basis: 50px;
+
+            i {
+                font-size: 20px;
+                color: black;
+                cursor: pointer;
+            }
+        }
+    
     }
 
     main {
 
-        img{
+        background-color: $graylight;
+    
+        img {
             height: 300px;
             object-fit: cover;
             width: 100%;
@@ -28,55 +50,42 @@ body {
 
         .titre-menu {
             position: relative;
-            border-radius: rem 1rem 0 0;
+            top: -4rem;
+            border-radius: 3rem 3rem 0 0;
             background-color: white;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            flex-basis: 95%;
             padding-left: 1.5rem;
             background-color: $graylight;
-        }
-        h1 {
-            font-family: 'Shrikhand', cursive;
-            font-size: 28px;
+
+            h1 {
+                font-family: 'Shrikhand', cursive;
+                font-size: 28px;
+                font-weight: 400;
+            }
+    
+            i {
+                display: flex;
+                font-size: 2rem;
+                
+            }
+            
+            @include color-heart;
         }
 
-        i {
-            display: flex;
-            font-size: 1.5rem;
-            
-        }
+        
+
+
+        
+        
         
     }
 
     
 
-    footer {
-        background-color:#353535;
-        color: white;
-        padding-top: 5px;
-        h1 {
-            margin-left: 20px;
-            display: flex;
-            font-family: 'Shrikhand', cursive;
-            font-weight: normal;
-        }
-        a {
-            text-decoration: none;
-            color:white
-    
-        }
-        i {
-            
-            padding-right: 10px;
-        }
-
-        .footer {
-            padding: 0rem 0 1rem 1rem;
-         
-        }
-        
-    }
+   
 }
 
 

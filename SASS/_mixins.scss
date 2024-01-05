@@ -1,3 +1,111 @@
+@mixin my-custom-loader {
+    .loader {
+      @include flex-center;
+      opacity: 0.9;
+      position: fixed;
+      inset: 0;
+      height: 100vh;
+      z-index: 1;
+      background: linear-gradient(45deg, #ff69b4, #ff6347, #87cefa, #98fb98);
+      background-size: 400% 400%;
+      animation: color-shift 4s infinite, fade-out 1s 3s forwards; /* Ajout d'une animation de fade-out */
+      font: 5vw/100vh "Shrikhand";
+      font-size: 4rem;
+      text-align: center;
+      color: transparent;
+      -webkit-background-clip: text; /* Permet de remplir le texte avec le dégradé */
+      backface-visibility: hidden;
+      pointer-events: none; /* Désactive les interactions avec le loader */
+    }
+  
+    body.loader-active {
+      overflow: hidden; /* Empêche le défilement de la page lorsque le loader est actif */
+    }
+  }
+  
+  /* Animation pour changer la couleur de fond */
+  @keyframes color-shift {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
+  }
+  
+  /* Animation pour le fade-out */
+  @keyframes fade-out {
+    0% {
+      opacity: 0.9;
+    }
+    100% {
+      opacity: 0;
+      display: none; /* Cacher complètement le loader à la fin de l'animation */
+    }
+}
+
+
+
+@mixin article-menu {
+    .article-menu {
+        display: flex;
+        background-color: white;
+        width: 100%;
+        height: 60px;
+        border-radius: 1rem;
+        overflow: hidden;
+        margin-bottom: 1rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        box-shadow: 0 2px 5px $--darkgray;
+
+        &:hover .select-choix {
+            margin: 0;
+            transition: all 0.5s;
+            cursor: pointer;
+        }
+        &:hover .select-choix i {
+            animation: spin 1s;
+        }
+
+        .description {
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;              
+            @include nowrap-ellipsis;
+            justify-content: space-between;
+            width: calc(100% - 54px);
+            padding: 0.5rem 0 0.5rem 1rem;
+            &:hover {
+                cursor: pointer;
+            
+            }
+        }
+        .prix {
+            @include flex-center;
+            width: 30px;
+            font-weight: bold;
+            align-items: flex-end;
+            padding: 0 0.5rem 0.5rem 0;
+            border-radius: 0 1rem 1rem 0;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+        .select-choix {
+            @include flex-center;
+            background-color: $--lightgreen;
+            color: white;
+            font-weight: bold;
+            font-size: 1.3rem;
+            align-items: center;
+            border-radius: 0 1rem 1rem 0;
+            width: 50px;
+            margin-right: -4rem;
+        }
+    }
+}
+
 
 @mixin btn-gradient-style {
     .btn-gradient { 
@@ -27,7 +135,7 @@
     justify-content: center;
 }
 
-@mixin color-heart() {                              // Mixin pour le remplissage du coeur
+@mixin color-heart {                              // Mixin pour le remplissage du coeur
     .layout-star {
         display: flex;
         height: 50px;

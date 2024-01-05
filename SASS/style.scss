@@ -10,6 +10,10 @@ body {
     max-width: $max-width;
 
     header {
+
+        @include my-custom-loader;  
+
+
         text-align: center;
         z-index: 1;
         overflow: hidden;
@@ -58,10 +62,7 @@ body {
 
         .fonctionnement {
 
-            
-
-            
-
+    
             ol {
 
                 margin-bottom: 100px;
