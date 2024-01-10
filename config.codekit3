@@ -41,18 +41,6 @@
       "oAP" : "\/assets\/css\/restaurant.css.map",
       "oF" : 0
     },
-    "\/assets\/css\/style-min.css" : {
-      "aP" : 1,
-      "bl" : 0,
-      "ci" : 0,
-      "co" : 0,
-      "ft" : 16,
-      "ma" : 0,
-      "oA" : 0,
-      "oAP" : "\/assets\/css\/style-min-min.css",
-      "oF" : 0,
-      "pg" : 0
-    },
     "\/assets\/css\/style.css" : {
       "aP" : 1,
       "bl" : 0,
@@ -207,6 +195,21 @@
       "oAP" : "\/restaurant4.html",
       "oF" : 0
     },
+    "\/sass\/_aside.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/sass\/_aside.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0,
+      "sct" : 0
+    },
     "\/sass\/_base.scss" : {
       "aP" : 0,
       "bl" : 0,
@@ -217,6 +220,51 @@
       "ma" : 0,
       "oA" : 1,
       "oAP" : "\/sass\/_base.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0,
+      "sct" : 0
+    },
+    "\/sass\/_footer.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/sass\/_footer.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0,
+      "sct" : 0
+    },
+    "\/sass\/_header.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/sass\/_header.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0,
+      "sct" : 0
+    },
+    "\/sass\/_keyframes.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/sass\/_keyframes.css",
       "oF" : 0,
       "oS" : 0,
       "pg" : 0,
@@ -263,18 +311,6 @@
       "oS" : 0,
       "pg" : 0,
       "sct" : 0
-    },
-    "\/sass\/style.css" : {
-      "aP" : 1,
-      "bl" : 0,
-      "ci" : 0,
-      "co" : 0,
-      "ft" : 16,
-      "ma" : 0,
-      "oA" : 0,
-      "oAP" : "\/sass\/style-min.css",
-      "oF" : 0,
-      "pg" : 0
     },
     "\/sass\/style.scss" : {
       "aP" : 0,

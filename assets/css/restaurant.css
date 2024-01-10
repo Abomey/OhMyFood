@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400&family=Shrikhand&display=swap");
 body {
   box-sizing: border-box;
@@ -91,27 +92,42 @@ header h1 {
   text-align: center;
 }
 
-header .logo {
-  display: flex;
-  align-items: center;
-  margin-left: 30px;
-  flex-basis: 50px;
+body {
+  box-sizing: border-box;
+  width: 375px;
 }
-header .logo i {
+body header {
+  display: flex;
+  justify-content: center;
+}
+body header .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body header .container .logo i {
   font-size: 20px;
   color: black;
   cursor: pointer;
+  margin-right: 50px;
+  /* Décaler la flèche de 10px à droite du texte */
 }
-
-main {
+body header .container .titre h1 {
+  font-size: 30px;
+  font-weight: 400;
+  margin: 0 auto;
+  font-style: italic;
+  line-height: 43px;
+}
+body main {
   background-color: #F6F6F6;
 }
-main img {
+body main img {
   height: 300px;
   object-fit: cover;
   width: 100%;
 }
-main .titre-menu {
+body main .titre-menu {
   position: relative;
   top: -4rem;
   border-radius: 3rem 3rem 0 0;
@@ -123,35 +139,27 @@ main .titre-menu {
   padding-left: 1.5rem;
   background-color: #F6F6F6;
 }
-main .titre-menu h1 {
+body main .titre-menu h1 {
   font-family: "Shrikhand", cursive;
   font-size: 28px;
   font-weight: 400;
 }
-main .titre-menu i {
+body main .titre-menu i {
   display: flex;
-  font-size: 2rem;
+  font-size: 28px;
+  padding-right: 50px;
 }
-main .titre-menu .layout-star {
+body main .menu {
+  background-color: #F6F6F6;
+}
+body main .menu .bulle {
+  background-color: white;
+  border: 1px solid #0026ff; /* Bordure de la bulle */
+  border-radius: 10px;
   display: flex;
-  height: 50px;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.5rem;
-}
-main .titre-menu .layout-star .fa-solid.fa-heart {
-  display: none;
-}
-main .titre-menu .layout-star:hover {
-  cursor: pointer;
-  opacity: 0;
-  background-clip: border-box;
-}
-main .titre-menu .layout-star:hover .fa-regular.fa-heart {
-  display: none;
-}
-main .titre-menu .layout-star:hover .fa-solid.fa-heart {
-  display: inline;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 349px;
 }
 
 footer {

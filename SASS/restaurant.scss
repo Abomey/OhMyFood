@@ -5,58 +5,103 @@
 @import "header"; // Style de base du header.
 
 // Ajout de style spécifique pour le header (pour la page dédiée aux restaurants)
-header {
-    .logo {
-        display: flex;
-        align-items: center;
-        margin-left: 30px;
-        flex-basis: 50px;
+body {
+    box-sizing: border-box;
+    width: 375px;
 
-        i {
-            font-size: 20px;
-            color: black;
-            cursor: pointer;
+    header {
+        @include flex-center;
+
+        .container {
+            @include flex-center;
+            align-items: center;
+
+            .logo {
+
+
+                i {
+
+                    font-size: 20px;
+                    color: black;
+                    cursor: pointer;
+                    margin-right: 50px;
+                    /* Décaler la flèche de 10px à droite du texte */
+                }
+
+            }
+
+            .titre {
+                h1 {
+
+                    font-size: 30px;
+                    font-weight: 400;
+                    margin: 0 auto;
+                    font-style: italic;
+                    line-height: 43px;
+                }
+            }
         }
     }
-}
 
+    main {
 
-main {
-
-    background-color: $graylight;
-
-    img {
-        height: 300px;
-        object-fit: cover;
-        width: 100%;
-    }
-
-    .titre-menu {
-        position: relative;
-        top: -4rem;
-        border-radius: 3rem 3rem 0 0;
-        background-color: white;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-basis: 95%;
-        padding-left: 1.5rem;
         background-color: $graylight;
 
-        h1 {
-            font-family: 'Shrikhand', cursive;
-            font-size: 28px;
-            font-weight: 400;
+        img {
+            height: 300px;
+            object-fit: cover;
+            width: 100%;
         }
 
-        i {
+        .titre-menu {
+            position: relative;
+            top: -4rem;
+            border-radius: 3rem 3rem 0 0;
+            background-color: white;
             display: flex;
-            font-size: 2rem;
+            justify-content: space-between;
+            align-items: center;
+            flex-basis: 95%;
+            padding-left: 1.5rem;
+            background-color: $graylight;
+
+            h1 {
+                font-family: 'Shrikhand', cursive;
+                font-size: 28px;
+                font-weight: 400;
+            }
+
+            i {
+                display: flex;
+                font-size: 28px;
+                padding-right: 50px;
+            
+            }
             
         }
+
+        .menu {
+            background-color:$graylight;
+            
+            
+
+            .bulle {
+                background-color:white;
+                border: 1px solid #0026ff; /* Bordure de la bulle */
+                border-radius: 10px;
+                display: flex;
+                justify-content: space-around;
+                flex-wrap: wrap;
+                width: 349px;
+                
+                
+            }
+            
         
-        @include color-heart;
+        } 
+        
     }
+
 }
 
 @import "footer";
