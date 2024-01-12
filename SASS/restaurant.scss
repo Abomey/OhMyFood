@@ -7,8 +7,6 @@
 // Ajout de style spécifique pour le header (pour la page dédiée aux restaurants)
 body {
     box-sizing: border-box;
-    width: 375px;
-
     header {
         @include flex-center;
 
@@ -43,83 +41,115 @@ body {
 
     main {
 
-        background-color: $graylight;
+
 
         img {
-            height: 300px;
+            height: 275px;
             object-fit: cover;
             width: 100%;
-        }
-
-        .titre-menu {
-            position: relative;
-            top: -4rem;
-            border-radius: 3rem 3rem 0 0;
-            background-color: white;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-basis: 95%;
-            padding-left: 1.5rem;
-            background-color: $graylight;
-
-            h1 {
-                font-family: 'Shrikhand', cursive;
-                font-size: 28px;
-                font-weight: 400;
-            }
-
-            i {
-                display: flex;
-                font-size: 28px;
-                padding-right: 50px;
             
-            }
         }
 
         .menu {
+            width: 100%;
+            background-color: $graylight;
+            margin-top: -3rem;
+            max-width: 1055px;
+            margin-inline: auto;
+
+
+            .titre-menu {
+                border-top-left-radius: 30px;
+                border-top-right-radius: 30px;
+                padding: 1.5rem;
+                position: relative;
+                background-color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-basis: 95%;
+                background-color: $graylight;
+                gap: 1rem;
+    
+                h1 {
+                    font-family: 'Shrikhand', cursive;
+                    font-size: 28px;
+                    font-weight: 400;
+                }
+    
+                i {
+                    display: flex;
+                    font-size: 28px;
+                    padding-right: 50px;
+                
+                }
+            }
 
 
 
           
-            
+            .entrees {
+                -webkit-animation: slide-in-left 1s 0s both;
+                        animation: slide-in-left 1s 0s both;
+            }
+            .plats {
+                -webkit-animation: slide-in-right 1s 0.5s both;
+                animation: slide-in-right 1s 0.5s both;
+            }
+            .desserts {
+                -webkit-animation: slide-in-left 1s 1s both;
+                        animation: slide-in-left 1s 1s both;
+            }
             .entrees, .plats, .desserts {
+                max-width: 634px;
+                margin-inline: auto;
+                padding-inline: 1.5rem;
 
                 h3 {
                     font-size:16px ;
                     font-weight: lighter;
-                    margin-left: 10px;
-                    width: 275px;
-                    height: 27px;
                     border-bottom: 3px solid #99E2D0;
                     width: 40px; 
                 }
 
+                .cards {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 1rem;
+                }
+
                 .card {
                     display: flex;
+                    justify-content: space-between;
+                    width: 100%;
+
                     background-color: white;
-                    width: 349px;
-                    height: 69px;
                     border-radius: 1rem;
-                    margin-bottom: 1rem;
-                    margin-left: 1rem;
-                    margin-right: 1rem;
+                    padding: 1rem;
                     box-shadow: 0 2px 5px $grayparis;
 
                     .description {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
 
                         h4 {
                             font-size: 16px;
+                            margin: 0;
 
                         }
     
                         p {
+                            margin: 0;
                             font-size: 15px;
+                            font-weight: 300;
                         }
                     }
     
                     .prix {
-                        font-size: 10px;
+                        font-size: 15px;
+                        margin: 0;
                     }
                 }
             }
@@ -155,10 +185,11 @@ body {
 
 
         } 
-        
     }
-
 }
+        
+    
+
 
 @import "footer";
 
