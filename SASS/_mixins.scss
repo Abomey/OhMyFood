@@ -47,58 +47,5 @@
     }
 }
 
-@mixin choix-menu {                                 // création d'un choix de menu
-    .menus {
-        border: 0;
-        padding: 0;
-        @include flex-center;
-        flex-wrap: wrap;
 
-        .articles {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            gap: 5px;
-            
-            .entrees, .plats, .desserts {
-                @include flex-center;
-                padding-bottom: 3rem;
-                flex-wrap: wrap;
-                width: 32%;
-                align-content: flex-start;
-                // min-width: 320px;
-                h4, p {
-                    margin: 0;
-                    overflow: hidden;             
-                    
-                }
-                p {
-                    font-size: 0.9rem;
-                }
-
-                h3 {
-                    @include flex-center;
-                    flex-basis: 100%;
-                    // mise en majuscule des titres de menus
-                    text-transform: uppercase;  
-                    
-                    font-weight: normal;
-                    margin: 0;
-                    padding-bottom: 1rem;
-                    position: relative;
-                    // trait de soulignement vert
-                    &::after {          
-                        position: absolute;
-                        top: 25px;
-                        content: "";
-                        height: 3px;
-                        width: 50px;
-                       
-                    }
-                }
-                @include article-menu;
-            }
-        }
-    }
-}
 

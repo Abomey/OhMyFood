@@ -115,7 +115,7 @@ body header .container .logo i {
 body header .container .titre h1 {
   font-size: 30px;
   font-weight: 400;
-  margin: 0 auto;
+  margin: 0;
   font-style: italic;
   line-height: 43px;
 }
@@ -149,29 +149,45 @@ body main .titre-menu i {
   font-size: 28px;
   padding-right: 50px;
 }
-body main .menu {
-  background-color: #F6F6F6;
-}
-body main .menu .bulle {
-  background-color: white;
-  border: 1px solid #0026ff; /* Bordure de la bulle */
-  border-radius: 10px;
+body main .menu .entrees .card, body main .menu .plats .card, body main .menu .desserts .card {
   display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+  background-color: white;
   width: 349px;
+  height: 69px;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  box-shadow: 0 2px 5px #EAEAEA;
+}
+body main .menu .entrees .card .description h4, body main .menu .plats .card .description h4, body main .menu .desserts .card .description h4 {
+  font-size: 16px;
+}
+body main .menu .entrees .card .description p, body main .menu .plats .card .description p, body main .menu .desserts .card .description p {
+  font-size: 15px;
+}
+body main .menu .entrees .card .prix, body main .menu .plats .card .prix, body main .menu .desserts .card .prix {
+  font-size: 10px;
 }
 
 footer {
-  display: flex;
-  flex-direction: column;
   background-color: #353535;
   color: white;
 }
-footer a {
+footer h1 {
+  display: flex;
+  justify-content: center;
+  width: 100%;
   font-family: "Shrikhand", cursive;
-  text-decoration: 0;
+  font-weight: normal;
+}
+footer a {
+  text-decoration: none;
   color: white;
+  align-items: center;
+}
+footer i {
+  padding-right: 5px;
 }
 @media screen and (min-width: 768px) {
   footer {
