@@ -149,6 +149,15 @@ body main .titre-menu i {
   font-size: 28px;
   padding-right: 50px;
 }
+body main .menu .entrees h3, body main .menu .plats h3, body main .menu .desserts h3 {
+  font-size: 16px;
+  font-weight: lighter;
+  margin-left: 10px;
+  width: 275px;
+  height: 27px;
+  border-bottom: 3px solid #99E2D0;
+  width: 40px;
+}
 body main .menu .entrees .card, body main .menu .plats .card, body main .menu .desserts .card {
   display: flex;
   background-color: white;
@@ -169,17 +178,38 @@ body main .menu .entrees .card .description p, body main .menu .plats .card .des
 body main .menu .entrees .card .prix, body main .menu .plats .card .prix, body main .menu .desserts .card .prix {
   font-size: 10px;
 }
+body main .menu .btn-gradient {
+  margin-top: 35px;
+  margin-bottom: 30px;
+  margin-left: 90px;
+  width: 186px;
+  height: 50px;
+  flex-wrap: wrap;
+  background-color: #F6F6F6;
+  color: white;
+  border-radius: 2rem;
+  border: none;
+  font-size: 1rem;
+  background: linear-gradient(#ff79da, #9356dc);
+  padding: 1rem 1rem 0.8rem 1.5rem;
+  box-shadow: 0 3px 10px #353535;
+}
+body main .menu .btn-gradient:hover {
+  cursor: pointer;
+}
 
 footer {
   background-color: #353535;
   color: white;
+  padding-left: 2rem;
+  padding-bottom: 1rem;
 }
 footer h1 {
   display: flex;
-  justify-content: center;
-  width: 100%;
   font-family: "Shrikhand", cursive;
   font-weight: normal;
+  padding-top: 20px;
+  font-size: 20px;
 }
 footer a {
   text-decoration: none;
