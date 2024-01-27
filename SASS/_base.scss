@@ -10,6 +10,8 @@ $green: #99E2D0;
 $grayblack: #353535;
 $graylight:#F6F6F6;
 $grayparis:#EAEAEA;
+$greenlight:#99E2D0;
+$green: #2FAF94;
 
 
 
@@ -44,6 +46,11 @@ body {
     font-weight: bold;
     font-weight: 700;
     line-height: 28px;
+    @media(min-width: 1023px) {
+        font-size: 40px;
+       
+    
+    }
   
 }
 

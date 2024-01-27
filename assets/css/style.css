@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400&family=Shrikhand&display=swap");
 body {
   box-sizing: border-box;
-  font-family: "roboto", sans-serif;
+  font-family: "Roboto", sans-serif;
   width: 100%;
   overflow-x: hidden;
   max-width: 1500px;
@@ -20,6 +20,11 @@ body {
   font-weight: bold;
   font-weight: 700;
   line-height: 28px;
+}
+@media (min-width: 1023px) {
+  .bold {
+    font-size: 40px;
+  }
 }
 
 .heart i {
@@ -77,6 +82,46 @@ body {
     background-position: 100% 50%;
   }
 }
+@keyframes slide-in-left {
+  0% {
+    -webkit-transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);
+    transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);
+    -webkit-transform-origin: 100% 50%;
+    transform-origin: 100% 50%;
+    -webkit-filter: blur(40px);
+    filter: blur(40px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0) scaleY(1) scaleX(1);
+    transform: translateX(0) scaleY(1) scaleX(1);
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    -webkit-filter: blur(0);
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-right {
+  0% {
+    -webkit-transform: translateX(1000px) scaleX(2.5) scaleY(0.2);
+    transform: translateX(1000px) scaleX(2.5) scaleY(0.2);
+    -webkit-transform-origin: 0% 50%;
+    transform-origin: 0% 50%;
+    -webkit-filter: blur(40px);
+    filter: blur(40px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0) scaleY(1) scaleX(1);
+    transform: translateX(0) scaleY(1) scaleX(1);
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    -webkit-filter: blur(0);
+    filter: blur(0);
+    opacity: 1;
+  }
+}
 .main-container {
   max-height: 95vh;
   overflow: hidden;
@@ -89,7 +134,6 @@ header {
   text-align: center;
   z-index: 1;
   overflow: hidden;
-  width: 375px;
   height: 63px;
 }
 header h1 {
@@ -105,6 +149,7 @@ main .hero {
   background-color: #F6F6F6;
 }
 main .hero .paris {
+  padding-inline: 15px;
   display: flex;
   justify-content: center;
   color: #353535;
@@ -113,6 +158,7 @@ main .hero .paris {
   height: 50px;
 }
 main .hero .information {
+  padding-inline: 15px;
   font-weight: 700;
   margin-top: 5px;
   align-items: center;
@@ -120,7 +166,6 @@ main .hero .information {
   padding-top: 1rem;
   background-color: #F6F6F6;
   font-weight: bold;
-  margin-bottom: 40px;
 }
 main .hero .btn-gradient {
   flex-wrap: wrap;
@@ -137,20 +182,33 @@ main .hero .btn-gradient {
 main .hero .btn-gradient:hover {
   cursor: pointer;
 }
+main .fonctionnement {
+  max-width: 1080px;
+  margin-inline: auto;
+  padding: 30px 15px 60px 15px;
+}
 main .fonctionnement ol {
+  margin: 0;
+  padding: 0;
   display: flex;
   justify-content: center;
-  margin-bottom: 100px;
   list-style: none;
-  flex-wrap: wrap;
+  display: flex;
+  flex-direction: column;
   gap: 3rem;
+  padding-left: 10px;
+}
+@media (min-width: 1024px) {
+  main .fonctionnement ol {
+    flex-direction: row;
+  }
 }
 main .fonctionnement ol li {
-  width: 280px;
+  width: 100%;
   background-color: #F6F6F6;
   border-radius: 1rem;
   padding: 1.5rem 0;
-  box-shadow: 0 3px 5px black;
+  box-shadow: 0 2px 4px rgba(148, 141, 141, 0.665);
   transition: transform 1s;
   font-size: 1.1rem;
 }
@@ -164,14 +222,47 @@ main .fonctionnement ol span {
   color: white;
 }
 main .restaurants {
+  padding: 40px 15px 50px 15px;
   background-color: #F6F6F6;
-  padding-top: 40px;
-  padding-bottom: 50px;
+}
+main .restaurants h2 {
+  max-width: 1080px;
+  margin-inline: auto;
+}
+main .restaurants .card-list {
+  max-width: 1080px;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+@media (min-width: 768px) {
+  main .restaurants .card-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+main .restaurants .card {
+  cursor: pointer;
+  position: relative;
+  min-width: 340px;
+  height: 251px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: 45%;
+  background-color: white;
+  border-radius: 1rem;
+}
+@media (min-width: 768px) {
+  main .restaurants .card {
+    margin-bottom: 18px;
+  }
 }
 main .restaurants .card img {
   width: 100%;
-  height: 200px;
   object-fit: cover;
+  height: 160px;
   border-radius: 1rem 1rem 0 0;
 }
 main .restaurants .card img .new-restaurant::before {
@@ -179,23 +270,62 @@ main .restaurants .card img .new-restaurant::before {
 }
 main .restaurants .card-content {
   position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+main .restaurants .card-content-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+main .restaurants .card-title, main .restaurants .card-subtitle {
+  margin: 0;
+  padding: 0;
+}
+main .restaurants .card-title {
+  font-size: 18px;
+  font-weight: 700;
+}
+main .restaurants .card-subtitle {
+  font-size: 17px;
+  font-weight: 300;
+}
+main .restaurants span {
+  position: absolute;
+  right: 10px;
+  top: 20px;
+  font-weight: bold;
+  font-weight: 500;
+  background-color: #99E2D0;
+  color: #2FAF94;
+  padding: 0.5rem;
+  width: 65px;
+  border-radius: 2px;
 }
 
 footer {
-  display: flex;
-  flex-direction: column;
   background-color: #353535;
   color: white;
+  padding-left: 2rem;
+  padding-bottom: 1rem;
+}
+footer h1 {
+  display: flex;
+  font-family: "Shrikhand", cursive;
+  font-weight: normal;
+  padding-top: 20px;
+  font-size: 20px;
 }
 footer a {
-  font-family: "Shrikhand", cursive;
-  text-decoration: 0;
+  text-decoration: none;
   color: white;
+  align-items: center;
 }
-@media screen and (min-width: 768px) {
-  footer {
-    flex-direction: row-reverse;
-  }
+footer i {
+  padding-right: 5px;
 }
 footer .footer-links {
   display: flex;
@@ -208,7 +338,15 @@ footer .footer-links {
 }
 @media screen and (min-width: 768px) {
   footer .footer-links {
-    gap: 14px;
+    flex-direction: row-reverse;
+    align-items: center;
+    padding: 20px 5px 0px 5px;
+  }
+  footer .footer-links h1 {
+    padding: 0px 60px 0px 0px;
+  }
+  footer .footer-links p {
+    margin: 0px;
   }
 }
 footer .footer-links .footer-interactions {
@@ -230,6 +368,10 @@ footer .footer-links .footer-information {
   footer .footer-links .footer-information {
     flex-direction: row;
   }
+}
+footer .footer-links .footer-menulogo {
+  display: flex;
+  justify-content: center;
 }
 
 aside {

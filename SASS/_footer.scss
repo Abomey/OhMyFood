@@ -30,17 +30,37 @@ footer {
     }
 
 
-    @media screen and (min-width: 768px) {
-        flex-direction: row-reverse;
-        // Aligner à droite.
-    }
+   
 
     .footer-links {
         @include flex-column-row-desktop;
 
         @media screen and (min-width: 768px) {
-            gap: 14px;
+            flex-direction: row-reverse;
+            align-items: center;
+            
+            padding:20px 5px 0px 5px ;
+            
+            
+
+            h1 {
+                
+                padding:0px 60px 0px 0px ; // met une marge a droite
+            }
+
+            p {
+                
+                
+                margin:0px;
+            }
+
+            
+
+            
+    
         }
+
+       
 
         .footer-interactions {
             @include flex-column-row-desktop;
@@ -52,6 +72,11 @@ footer {
             @include flex-column-row-desktop;
             gap: 7px;
 
+        }
+
+        .footer-menulogo {
+            display: flex;
+            justify-content: center;
         }
     }
 
