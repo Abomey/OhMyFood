@@ -5,6 +5,7 @@ footer {
     padding-left: 2rem;
     padding-bottom: 1rem;
     
+    
 
     h1 {
         display: flex;
@@ -21,19 +22,20 @@ footer {
         color: white;
         align-items: center;
         
-        
-      
-        
     }
+
     i {
         padding-right: 5px;
     }
 
-
-   
-
     .footer-links {
         @include flex-column-row-desktop;
+
+        p {
+
+            margin-top:3px;
+            margin-bottom:3px;
+        }
 
         @media screen and (min-width: 768px) {
             flex-direction: row-reverse;
@@ -41,8 +43,6 @@ footer {
             
             padding:20px 5px 0px 5px ;
             
-            
-
             h1 {
                 
                 padding:0px 60px 0px 0px ; // met une marge a droite
@@ -50,14 +50,9 @@ footer {
 
             p {
                 
-                
                 margin:0px;
             }
 
-            
-
-            
-    
         }
 
        
