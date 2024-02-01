@@ -38,9 +38,20 @@ main {
             padding-top: 1rem;
             background-color: $graylight;
             font-weight: bold;
+            height: 250px;
+
+            .titlegray {
+                color: #353535;
+                font-weight: 300;
+                font-size: 18px;
+                margin-bottom: 40px;
+              }
+              
+            
         }
 
         .btn-gradient { 
+            text-decoration: none;
             flex-wrap: wrap;
             background-color:$graylight;
             color:white;
@@ -122,27 +133,29 @@ main {
             
             }
 
+            a {
+                cursor: pointer;
+                margin: 0;
+                padding: 0;
+                text-decoration: none;
+                min-width: 340px;
+                flex-basis: 45%;
+                color: #000;
+                border-radius: 1rem;
+                @media(min-width: 768px) {
+                    margin-bottom: 18px;
+                }
+            }
         }
         
 
         .card {
-
-            cursor: pointer;
             position: relative;
-            min-width: 340px;
             height: 251px;
             display: flex;
             flex-wrap: wrap;
-            flex-basis: 45%;
             background-color: white;
             border-radius: 1rem;
-            
-            @media(min-width: 768px) {
-                margin-bottom: 18px;
-                
-                
-            }
-
             img {
                 width: 100%;
                 object-fit: cover;

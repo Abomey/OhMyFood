@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400&family=Shrikhand&display=swap");
 body {
   box-sizing: border-box;
@@ -129,7 +130,8 @@ header {
 }
 header h1 {
   font-family: "Shrikhand", cursive;
-  font-size: 1.875rem;
+  font-size: 30px;
+  font-weight: 400;
   margin: 0;
   padding: 1rem 0;
   text-align: center;
@@ -174,16 +176,16 @@ body main img {
   width: 100%;
 }
 body main .menu {
-  width: 100%;
   background-color: #F6F6F6;
   margin-top: -3rem;
   max-width: 1055px;
   margin-inline: auto;
-}
-body main .menu .titre-menu {
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
+  position: relative;
   padding: 1.5rem;
+}
+body main .menu .titre-menu {
   position: relative;
   background-color: white;
   display: flex;
@@ -192,6 +194,13 @@ body main .menu .titre-menu {
   flex-basis: 95%;
   background-color: #F6F6F6;
   gap: 1rem;
+}
+@media (min-width: 768px) {
+  body main .menu .titre-menu {
+    justify-content: center;
+    width: 40%;
+    margin-inline: auto;
+  }
 }
 body main .menu .titre-menu h1 {
   font-family: "Shrikhand", cursive;
@@ -217,7 +226,6 @@ body main .menu .desserts {
 body main .menu .entrees, body main .menu .plats, body main .menu .desserts {
   max-width: 634px;
   margin-inline: auto;
-  padding-inline: 1.5rem;
 }
 body main .menu .entrees h3, body main .menu .plats h3, body main .menu .desserts h3 {
   font-size: 16px;
@@ -265,7 +273,6 @@ body main .menu .information {
 body main .menu .information .btn-gradient {
   margin-top: 35px;
   margin-bottom: 30px;
-  margin-left: 90px;
   width: 186px;
   height: 50px;
   flex-wrap: wrap;
@@ -283,22 +290,30 @@ body main .menu .information .btn-gradient:hover {
 }
 
 footer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
   background-color: #353535;
   color: white;
-  padding-left: 2rem;
-  padding-bottom: 1rem;
+  padding: 22px 25px;
 }
-footer h1 {
-  display: flex;
+@media screen and (min-width: 768px) {
+  footer {
+    flex-direction: row;
+  }
+}
+footer h2 {
   font-family: "Shrikhand", cursive;
-  font-weight: normal;
-  padding-top: 20px;
-  font-size: 20px;
+  font-weight: 400;
+  font-size: 18px;
+}
+footer p {
+  /* Annulation des marges par défaut des paragraphes */
+  margin: 0;
 }
 footer a {
   text-decoration: none;
   color: white;
-  align-items: center;
 }
 footer i {
   padding-right: 5px;
@@ -306,6 +321,9 @@ footer i {
 footer .footer-links {
   display: flex;
   flex-direction: column;
+  gap: 7px;
+  /* Sélection des paragraphes du premier footer-links-group */
+  /* Sélection des paragraphes du dernier footer-links-group */
 }
 @media screen and (min-width: 768px) {
   footer .footer-links {
@@ -314,40 +332,33 @@ footer .footer-links {
 }
 @media screen and (min-width: 768px) {
   footer .footer-links {
+    gap: 7px;
+  }
+}
+footer .footer-links-group {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+@media screen and (min-width: 768px) {
+  footer .footer-links-group {
+    flex-direction: row;
+  }
+}
+footer .footer-links-group:first-child p {
+  width: 190px;
+}
+footer .footer-links-group:last-child p {
+  width: 130px;
+}
+@media screen and (min-width: 768px) {
+  footer {
     flex-direction: row-reverse;
     align-items: center;
-    padding: 20px 5px 0px 5px;
   }
-  footer .footer-links h1 {
-    padding: 0px 60px 0px 0px;
-  }
-  footer .footer-links p {
+  footer p {
     margin: 0px;
   }
-}
-footer .footer-links .footer-interactions {
-  display: flex;
-  flex-direction: column;
-  gap: 7px;
-}
-@media screen and (min-width: 768px) {
-  footer .footer-links .footer-interactions {
-    flex-direction: row;
-  }
-}
-footer .footer-links .footer-information {
-  display: flex;
-  flex-direction: column;
-  gap: 7px;
-}
-@media screen and (min-width: 768px) {
-  footer .footer-links .footer-information {
-    flex-direction: row;
-  }
-}
-footer .footer-links .footer-menulogo {
-  display: flex;
-  justify-content: center;
 }
 
 /*# sourceMappingURL=restaurant.css.map */

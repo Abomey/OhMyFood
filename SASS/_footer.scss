@@ -1,81 +1,51 @@
 footer {
-
+    @include flex-column-row-desktop;
+    gap: 16px;
     background-color: $grayblack;
     color: white;
-    padding-left: 2rem;
-    padding-bottom: 1rem;
-    
-    
-
-    h1 {
-        display: flex;
+    padding: 22px 25px;
+    h2 {
         font-family: 'Shrikhand', cursive;
-        font-weight: normal;
-        padding-top: 20px;
-        font-size: 20px;
-        
+        font-weight: 400;
+        font-size: 18px; 
     }
-    
+    p {
+        /* Annulation des marges par défaut des paragraphes */
+        margin: 0;
+    }
     a {
-        
         text-decoration: none;
         color: white;
-        align-items: center;
-        
     }
-
     i {
         padding-right: 5px;
     }
-
     .footer-links {
         @include flex-column-row-desktop;
-
-        p {
-
-            margin-top:3px;
-            margin-bottom:3px;
-        }
-
+        gap: 7px;
         @media screen and (min-width: 768px) {
-            flex-direction: row-reverse;
-            align-items: center;
-            
-            padding:20px 5px 0px 5px ;
-            
-            h1 {
-                
-                padding:0px 60px 0px 0px ; // met une marge a droite
-            }
-
-            p {
-                
-                margin:0px;
-            }
-
+            gap: 7px;
         }
-
-       
-
-        .footer-interactions {
+        &-group {
             @include flex-column-row-desktop;
             gap: 7px;
-
         }
-
-        .footer-information {
-            @include flex-column-row-desktop;
-            gap: 7px;
-
+        /* Sélection des paragraphes du premier footer-links-group */
+        &-group:first-child p {
+            width: 190px;
         }
-
-        .footer-menulogo {
-            display: flex;
-            justify-content: center;
+        /* Sélection des paragraphes du dernier footer-links-group */
+        &-group:last-child p {
+            width: 130px;
         }
     }
-
-
-
-
+    @media screen and (min-width: 768px) {
+        flex-direction: row-reverse;
+        align-items: center;
+        p {
+            margin:0px;
+        }
+    }
 }
+
+

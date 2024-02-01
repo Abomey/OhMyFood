@@ -168,8 +168,16 @@ main .hero .information {
   padding-top: 1rem;
   background-color: #F6F6F6;
   font-weight: bold;
+  height: 250px;
+}
+main .hero .information .titlegray {
+  color: #353535;
+  font-weight: 300;
+  font-size: 18px;
+  margin-bottom: 40px;
 }
 main .hero .btn-gradient {
+  text-decoration: none;
   flex-wrap: wrap;
   background-color: #F6F6F6;
   color: white;
@@ -245,21 +253,28 @@ main .restaurants .card-list {
     justify-content: space-between;
   }
 }
-main .restaurants .card {
+main .restaurants .card-list a {
   cursor: pointer;
-  position: relative;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
   min-width: 340px;
-  height: 251px;
-  display: flex;
-  flex-wrap: wrap;
   flex-basis: 45%;
-  background-color: white;
+  color: #000;
   border-radius: 1rem;
 }
 @media (min-width: 768px) {
-  main .restaurants .card {
+  main .restaurants .card-list a {
     margin-bottom: 18px;
   }
+}
+main .restaurants .card {
+  position: relative;
+  height: 251px;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: white;
+  border-radius: 1rem;
 }
 main .restaurants .card img {
   width: 100%;
@@ -309,22 +324,30 @@ main .restaurants span {
 }
 
 footer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
   background-color: #353535;
   color: white;
-  padding-left: 2rem;
-  padding-bottom: 1rem;
+  padding: 22px 25px;
 }
-footer h1 {
-  display: flex;
+@media screen and (min-width: 768px) {
+  footer {
+    flex-direction: row;
+  }
+}
+footer h2 {
   font-family: "Shrikhand", cursive;
-  font-weight: normal;
-  padding-top: 20px;
-  font-size: 20px;
+  font-weight: 400;
+  font-size: 18px;
+}
+footer p {
+  /* Annulation des marges par défaut des paragraphes */
+  margin: 0;
 }
 footer a {
   text-decoration: none;
   color: white;
-  align-items: center;
 }
 footer i {
   padding-right: 5px;
@@ -332,52 +355,44 @@ footer i {
 footer .footer-links {
   display: flex;
   flex-direction: column;
+  gap: 7px;
+  /* Sélection des paragraphes du premier footer-links-group */
+  /* Sélection des paragraphes du dernier footer-links-group */
 }
 @media screen and (min-width: 768px) {
   footer .footer-links {
     flex-direction: row;
   }
 }
-footer .footer-links p {
-  margin-top: 3px;
-  margin-bottom: 3px;
-}
 @media screen and (min-width: 768px) {
   footer .footer-links {
+    gap: 7px;
+  }
+}
+footer .footer-links-group {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+@media screen and (min-width: 768px) {
+  footer .footer-links-group {
+    flex-direction: row;
+  }
+}
+footer .footer-links-group:first-child p {
+  width: 190px;
+}
+footer .footer-links-group:last-child p {
+  width: 130px;
+}
+@media screen and (min-width: 768px) {
+  footer {
     flex-direction: row-reverse;
     align-items: center;
-    padding: 20px 5px 0px 5px;
   }
-  footer .footer-links h1 {
-    padding: 0px 60px 0px 0px;
-  }
-  footer .footer-links p {
+  footer p {
     margin: 0px;
   }
-}
-footer .footer-links .footer-interactions {
-  display: flex;
-  flex-direction: column;
-  gap: 7px;
-}
-@media screen and (min-width: 768px) {
-  footer .footer-links .footer-interactions {
-    flex-direction: row;
-  }
-}
-footer .footer-links .footer-information {
-  display: flex;
-  flex-direction: column;
-  gap: 7px;
-}
-@media screen and (min-width: 768px) {
-  footer .footer-links .footer-information {
-    flex-direction: row;
-  }
-}
-footer .footer-links .footer-menulogo {
-  display: flex;
-  justify-content: center;
 }
 
 aside {
@@ -391,8 +406,6 @@ aside {
   animation: display-in-out 2.5s forwards;
 }
 aside .loader {
-  display: flex;
-  justify-content: center;
   background: linear-gradient(45deg, #ff69b4, #ff6347, #87cefa, #98fb98);
   animation: color-shift 2.5s infinite; /* Ajout d'une animation de fade-out */
   font: 5vw/100vh "Shrikhand";

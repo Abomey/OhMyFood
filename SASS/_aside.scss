@@ -7,7 +7,6 @@ aside {
     background-color: white;
     animation: display-in-out 2.5s forwards;
     .loader {
-        @include flex-center;
         background: linear-gradient(45deg, #ff69b4, #ff6347, #87cefa, #98fb98);
         animation: color-shift 2.5s infinite; /* Ajout d'une animation de fade-out */
         font: 5vw/100vh "Shrikhand";

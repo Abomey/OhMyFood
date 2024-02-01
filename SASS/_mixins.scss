@@ -27,30 +27,5 @@
     justify-content: center;
 }
 
-@mixin color-heart {                              // Mixin pour le remplissage du coeur
-    .layout-star {
-        display: flex;
-        height: 50px;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.5rem;
-        .fa-solid.fa-heart { 
-            display: none;
-        }
-       &:hover {
-            cursor: pointer;                        // cache le coeur vide
-            .fa-regular.fa-heart {
-                display: none;
-            }
-            .fa-solid.fa-heart {                    // fait apparaitre le coeur plein pour y affecter le dégradé
-                display: inline;
-            }
-            opacity: 0;                             // opère le dégradé de couleurs
-            background-clip: border-box;
-   
-        }
-    }
-}
-
 
 
