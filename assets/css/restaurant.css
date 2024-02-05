@@ -248,6 +248,14 @@ body main .menu .entrees .card, body main .menu .plats .card, body main .menu .d
   padding: 1rem;
   box-shadow: 0 2px 5px #EAEAEA;
 }
+body main .menu .entrees .card:hover .select-choix, body main .menu .plats .card:hover .select-choix, body main .menu .desserts .card:hover .select-choix {
+  margin: 0;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+body main .menu .entrees .card:hover .select-choix i, body main .menu .plats .card:hover .select-choix i, body main .menu .desserts .card:hover .select-choix i {
+  animation: spin 1s;
+}
 body main .menu .entrees .card .description, body main .menu .plats .card .description, body main .menu .desserts .card .description {
   display: flex;
   flex-direction: column;
@@ -265,6 +273,18 @@ body main .menu .entrees .card .description p, body main .menu .plats .card .des
 body main .menu .entrees .card .prix, body main .menu .plats .card .prix, body main .menu .desserts .card .prix {
   font-size: 15px;
   margin: 0;
+}
+body main .menu .entrees .card .select-choix, body main .menu .plats .card .select-choix, body main .menu .desserts .card .select-choix {
+  display: flex;
+  justify-content: center;
+  background-color: #99E2D0;
+  color: white;
+  font-weight: bold;
+  font-size: 1.3rem;
+  align-items: center;
+  border-radius: 0 1rem 1rem 0;
+  width: 50px;
+  margin-right: -4rem;
 }
 body main .menu .information {
   display: flex;
