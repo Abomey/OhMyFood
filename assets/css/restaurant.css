@@ -241,25 +241,24 @@ body main .menu .entrees .cards, body main .menu .plats .cards, body main .menu 
 }
 body main .menu .entrees .card, body main .menu .plats .card, body main .menu .desserts .card {
   display: flex;
-  justify-content: space-between;
   width: 100%;
   background-color: white;
   border-radius: 1rem;
-  padding: 1rem;
   box-shadow: 0 2px 5px #EAEAEA;
+  overflow: hidden;
 }
 body main .menu .entrees .card:hover .select-choix, body main .menu .plats .card:hover .select-choix, body main .menu .desserts .card:hover .select-choix {
   margin: 0;
   transition: all 0.5s;
   cursor: pointer;
 }
-body main .menu .entrees .card:hover .select-choix i, body main .menu .plats .card:hover .select-choix i, body main .menu .desserts .card:hover .select-choix i {
-  animation: spin 1s;
-}
 body main .menu .entrees .card .description, body main .menu .plats .card .description, body main .menu .desserts .card .description {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  overflow: hidden;
+  width: calc(100% - 10px);
+  padding: 1rem 1rem 1rem 1rem;
 }
 body main .menu .entrees .card .description h4, body main .menu .plats .card .description h4, body main .menu .desserts .card .description h4 {
   font-size: 16px;
@@ -273,6 +272,10 @@ body main .menu .entrees .card .description p, body main .menu .plats .card .des
 body main .menu .entrees .card .prix, body main .menu .plats .card .prix, body main .menu .desserts .card .prix {
   font-size: 15px;
   margin: 0;
+  padding: 20px;
+}
+body main .menu .entrees .card .prix p, body main .menu .plats .card .prix p, body main .menu .desserts .card .prix p {
+  margin-right: 10px;
 }
 body main .menu .entrees .card .select-choix, body main .menu .plats .card .select-choix, body main .menu .desserts .card .select-choix {
   display: flex;
@@ -307,6 +310,10 @@ body main .menu .information .btn-gradient {
 }
 body main .menu .information .btn-gradient:hover {
   cursor: pointer;
+  transform: scale(1.02);
+  box-shadow: 0 3px 6px #353535;
+  transition: 0.3s;
+  filter: brightness(115%);
 }
 
 footer {

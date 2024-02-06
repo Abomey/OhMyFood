@@ -129,30 +129,38 @@ body {
                     flex-direction: column;
                     align-items: center;
                     gap: 1rem;
+
+                    
                 }
 
                 .card {
                     display: flex;
-                    justify-content: space-between;
+                    
                     width: 100%;
+                    
                     background-color: white;
                     border-radius: 1rem;
-                    padding: 1rem;
+                    
                     box-shadow: 0 2px 5px $grayparis;
+                    overflow: hidden;
 
                     &:hover .select-choix {
                         margin: 0;
                         transition: all 0.5s;
                         cursor: pointer;
                     }
-                    &:hover .select-choix i {
-                        animation: spin 1s;
-                    }
-
+                    
+                    
+                
                     .description {
                         display: flex;
                         flex-direction: column;
                         justify-content: space-between;
+                        overflow: hidden;  
+                        width: calc(100% - 10px);
+                        padding: 1rem 1rem 1rem 1rem;
+                        
+                        
 
                         h4 {
                             font-size: 16px;
@@ -170,6 +178,14 @@ body {
                     .prix {
                         font-size: 15px;
                         margin: 0;
+                        padding:20px;
+
+                        p {
+                            margin-right: 10px;
+                        }
+                        
+                        
+                        
                     }
 
                     .select-choix {
@@ -182,6 +198,9 @@ body {
                         border-radius: 0 1rem 1rem 0;
                         width: 50px;
                         margin-right: -4rem;
+                        
+                        
+                        
                     }
 
                  
@@ -214,8 +233,11 @@ body {
                 
                     
                     &:hover {
-                        cursor:pointer;
-                        
+                        cursor: pointer;
+                        transform: scale(1.02);
+                        box-shadow: 0 3px 6px $grayblack;
+                        transition: 0.3s;
+                        filter: brightness(115%);
                     }
             
                 } 
