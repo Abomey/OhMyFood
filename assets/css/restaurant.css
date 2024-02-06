@@ -272,7 +272,7 @@ body main .menu .entrees .card .description p, body main .menu .plats .card .des
 body main .menu .entrees .card .prix, body main .menu .plats .card .prix, body main .menu .desserts .card .prix {
   font-size: 15px;
   margin: 0;
-  padding: 20px;
+  padding: 20px 20px 5px 20px;
 }
 body main .menu .entrees .card .prix p, body main .menu .plats .card .prix p, body main .menu .desserts .card .prix p {
   margin-right: 10px;
@@ -286,8 +286,8 @@ body main .menu .entrees .card .select-choix, body main .menu .plats .card .sele
   font-size: 1.3rem;
   align-items: center;
   border-radius: 0 1rem 1rem 0;
-  width: 50px;
-  margin-right: -4rem;
+  width: 90px;
+  margin-right: -90px;
 }
 body main .menu .information {
   display: flex;
