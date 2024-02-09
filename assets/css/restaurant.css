@@ -246,8 +246,6 @@ body main .menu .entrees .card, body main .menu .plats .card, body main .menu .d
   border-radius: 1rem;
   box-shadow: 0 2px 5px #EAEAEA;
   overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
 }
 body main .menu .entrees .card:hover .select-choix, body main .menu .plats .card:hover .select-choix, body main .menu .desserts .card:hover .select-choix {
   margin: 0;
@@ -261,15 +259,24 @@ body main .menu .entrees .card .description, body main .menu .plats .card .descr
   overflow: hidden;
   width: calc(100% - 10px);
   padding: 1rem 1rem 1rem 1rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 body main .menu .entrees .card .description h4, body main .menu .plats .card .description h4, body main .menu .desserts .card .description h4 {
   font-size: 16px;
   margin: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 body main .menu .entrees .card .description p, body main .menu .plats .card .description p, body main .menu .desserts .card .description p {
   margin: 0;
   font-size: 15px;
   font-weight: 300;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 body main .menu .entrees .card .prix, body main .menu .plats .card .prix, body main .menu .desserts .card .prix {
   font-size: 15px;

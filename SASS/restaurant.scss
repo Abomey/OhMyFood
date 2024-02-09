@@ -140,11 +140,9 @@ body {
                     border-radius: 1rem;
                     box-shadow: 0 2px 5px $grayparis;
                     overflow: hidden;
-                    white-space: nowrap;
-                    text-overflow: ellipsis; 
+                   
                     
-
-
+                    
 
                     &:hover .select-choix {
                         margin: 0;
@@ -161,6 +159,10 @@ body {
                         overflow: hidden;  
                         width: calc(100% - 10px);
                         padding: 1rem 1rem 1rem 1rem;
+                        overflow: hidden;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                            
                         
                         
                         
@@ -168,6 +170,9 @@ body {
                         h4 {
                             font-size: 16px;
                             margin: 0;
+                            overflow: hidden;
+                            white-space: nowrap;
+                            text-overflow: ellipsis;
 
                         }
     
@@ -175,6 +180,9 @@ body {
                             margin: 0;
                             font-size: 15px;
                             font-weight: 300;
+                            overflow: hidden;
+                            white-space: nowrap;
+                            text-overflow: ellipsis;
                         }
                     }
     
